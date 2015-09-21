@@ -1,0 +1,35 @@
+---
+
+- name: Update apt cache
+  apt: update_cache=yes cache_valid_time=3600
+
+- name: Install pre-requisites
+  apt: name={{item}} state=present
+  with_items:
+    - unzip
+
+
+- name: Create Temp directory
+  file: path={{ tmp_location }} state=directory mode=0755
+
+# Grab the staged installer files
+- name: Download local copy of installer
+  get_url:
+    url={{ media_host }}/software/ibm/installation_manager/{{ version }}/agent.installer.{{platform}.gtk.{{architecture}}_{{ version_tag }}.zip
+    dest={{ tmp_location }}/ibmim.zip
+
+# Extract the installation files
+- name: Extract archive
+  command:
+    chdir={{ tmp_location }}
+    /usr/bin/unzip -q {{ tmp_location }}/ibmim.zip
+    creates=install.sh
+
+- name: Run silent install
+  command:
+    chdir={{ tmp_location }}
+    {{ tmp_location }}/install -acceptLicense --launcher.ini silent-install.ini
+    creates={{ install_location }}
+  register: install
+  failed_when: install.rc != 0
+  changed_when: install.rc == 0
