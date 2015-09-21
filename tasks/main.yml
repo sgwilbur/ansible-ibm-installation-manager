@@ -15,7 +15,7 @@
 # Grab the staged installer files
 - name: Download local copy of installer
   get_url:
-    url={{ media_host }}/software/ibm/installation_manager/{{ version }}/agent.installer.{{platform}.gtk.{{architecture}}_{{ version_tag }}.zip
+    url={{ media_host }}/software/ibm/installation_manager/{{ version }}/agent.installer.{{ platform }}.gtk.{{ architecture }}_{{ version_tag }}.zip
     dest={{ tmp_location }}/ibmim.zip
 
 # Extract the installation files

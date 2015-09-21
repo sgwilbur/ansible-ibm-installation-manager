@@ -5,7 +5,7 @@ tmp_location: /tmp/im
 
 # media information
 media_host: http\://192.168.1.11\:81
-version: 1.8.2
+version: 1.8.2.0
 platform: linux
 architecture: x86_64
 version_tag: 1.8.2000.20150303_1526
