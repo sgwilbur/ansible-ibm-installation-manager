@@ -23,13 +23,12 @@
   command:
     chdir={{ tmp_location }}
     /usr/bin/unzip -q {{ tmp_location }}/ibmim.zip
-    creates=install.sh
+    creates={{tmp_location }}/install
 
-- name: Run silent install
+- name: Run silent install to {{ install_location }}
   command:
     chdir={{ tmp_location }}
     {{ tmp_location }}/install -acceptLicense --launcher.ini silent-install.ini
     creates={{ install_location }}
   register: install
-  failed_when: install.rc != 0
-  changed_when: install.rc == 0
+  changed_when: install.rc != 0
