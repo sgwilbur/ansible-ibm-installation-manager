@@ -25,10 +25,10 @@
     /usr/bin/unzip -q {{ tmp_location }}/ibmim.zip
     creates={{tmp_location }}/install
 
-- name: Run silent install to {{ install_location }}
+- name: Run silent install to {{ ibmim_install_location }}
   command:
     chdir={{ tmp_location }}
     {{ tmp_location }}/install -acceptLicense --launcher.ini silent-install.ini
-    creates={{ install_location }}
+    creates={{ ibmim_install_location }}
   register: install
   changed_when: install.rc != 0

@@ -11,3 +11,4 @@ architecture: x86_64
 version_tag: 1.8.2000.20150303_1526
 
 install_location: /opt/IBM/InstallationManager
+ibmim_install_location: /opt/IBM/InstallationManager
