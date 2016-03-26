@@ -1,3 +1,14 @@
 ---
-
-
+galaxy_info:
+  author: Sean G Wilbur
+  description: An Ansible role for installing IBM Installation Manager.
+  company: vl4rl.com
+  license: MIT
+  min_ansible_version: 1.2
+  platforms:
+  - name: Ubuntu
+    versions:
+    - trusty
+  categories:
+  - ibm
+  - package-manager
