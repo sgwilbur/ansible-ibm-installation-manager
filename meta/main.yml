@@ -9,7 +9,8 @@ galaxy_info:
   - name: Ubuntu
     versions:
     - trusty
-  categories:
+  galaxy_tags:
   - ibm
-  - package-manager
+  - packaging
+  - utility
   dependencies: []
