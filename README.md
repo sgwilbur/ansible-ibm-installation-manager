@@ -35,7 +35,7 @@ Or the more advanced version( see `defaults\main.yml` for variables ) say to ins
 
     url={{ media_host }}/software/ibm/installation_manager/{{ version }}/agent.installer.{{ platform }}.gtk.{{ architecture }}_{{ version_tag }}.zip
 
-So this requires that you the media hosted at `/software/ibm/installation_manager/<version>/` and the rest is keyed off of your version and architecture.
+So this requires that you the media hosted at `/software/ibm/installation_manager/{version}/` and the rest is keyed off of your version and architecture.
 
 #### Supported Platforms
 
