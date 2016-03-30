@@ -1,14 +1,8 @@
 ---
 
-
-tmp_location: /tmp/im
-
 # media information
-media_host: http\://192.168.1.11\:81
+media_host:
 version: 1.8.4.0
 platform: linux
 architecture: x86_64
 version_tag: 1.8.4000.20151125_0201
-
-install_location: /opt/IBM/InstallationManager
-ibmim_install_location: /opt/IBM/InstallationManager

@@ -8,11 +8,11 @@
   with_items:
     - unzip
 
-
 - name: Create Temp directory
   file: path={{ tmp_location }} state=directory mode=0755
 
 # Grab the staged installer files
+# TODO: reimplement with unarchive module adding in ansible 2.0
 - name: Download local copy of installer
   get_url:
     url={{ media_host }}/software/ibm/installation_manager/{{ version }}/agent.installer.{{ platform }}.gtk.{{ architecture }}_{{ version_tag }}.zip
