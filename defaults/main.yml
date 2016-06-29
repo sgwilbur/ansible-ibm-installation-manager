@@ -3,7 +3,7 @@
 ibmim_install_location: /opt/IBM/InstallationManager
 tmp_location: /tmp/im
 
-version: 1.8.4.0
+version: 1.8.5.0
 platform: linux
 architecture: x86_64
-version_tag: 1.8.4000.20151125_0201
+version_tag: 1.8.5000.20160506_1125
